@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="slider-header">
+                <div class="img-outer"><img src="/souce/image/ChatGPT Image Jun 23, 2026, 01_46_10 PM.png" alt=""></div>
+                <h1>To-DO</h1>
+                <p>Stay Focused.<br>Get things done.</p>
+            </div>
+            <nav>
+                <a class="active totaltask" id="totaltask"><i class="fa-solid fa-list"></i> All Tasks</a>
+                <a class="activeList" id="activeList"><i class="fa-regular fa-circle"></i> Active</a>
+                <a class="CompletedList" id="completedBtn"><i class="fa-solid fa-check"></i> Completed</a>
+            </nav>
+            <button class="add-btn" id="openModal">
+                + Add New Task
+            </button>
+            <div class="slider-img"><img src="/souce/image/light-2.png" alt=""></div>
+
+        </aside>
+        <main class="main">
+            <header>
+                <div>
+                    <h1>My task 📝</h1>
+                    <p>Organize,Prioritize, and accomplish.</p>
+                </div>
+                <div class="temewSetect">
+                    <div class="temewicons"><i class="fa-solid fa-cloud-sun"></i></div>
+                    <div class="temewicons"><i class="fa-solid fa-cloud-moon"></i></div>
+                </div>
+
+
+            </header>
+
+            <section class="task-1">
+                <div class="task-input"> <input id="search" type="text" placeholder="Search tasks..."></div>
+                <div><button class="add-btn btn-add">🔍Search Task</button></div>
+            </section>
+
+            <section class="main-section">
+                <div class="stats">
+
+                    <div class="card">
+                        <h3 class="cardT">15</h3>
+                        <p>Total Tasks</p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="value"></h3>
+                        <p>Completed</p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="cardP"></h3>
+                        <p>Pending</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="tasks">
+
+                <div class="task progress">
+                    <div class="input-aglin">
+                        <input type="checkbox" checked>
+                        <div>
+                            <h3>Learn HTML</h3>
+                            <p>leran</p>
+                            <span><small>09/02/2026</small></span>
+                        </div>
+                    </div>
+
+                    <div class="outer-check-icons">
+                        <div class="check-icons">
+                            <i class="fa-solid delete fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="task  progress">
+                     <div class="input-aglin">
+                        <input type="checkbox" checked>
+                        <div>
+                            <h3>Learn CSS</h3>
+                            <p>leran</p>
+                            <span><small>09/02/2026</small></span>
+                        </div>
+                    </div>
+
+                    <div class="outer-check-icons">
+                        <div class="check-icons">
+                            <i class="fa-solid delete fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="task Completed">
+                     <div class="input-aglin">
+                        <input type="checkbox" checked>
+                        <div>
+                            <h3>Learn javascript</h3>
+                            <p>leran</p>
+                            <span><small>09/02/2026</small></span>
+                        </div>
+                    </div>
+
+                    <div class="outer-check-icons">
+                        <div class="check-icons">
+                            <i class="fa-solid delete fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </section>
+
+
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+
+                    <div class="modal-header">
+                        <h2>📝 Add Task</h2>
+                        <p>Updates your task details.</p>
+                    </div>
+                    <hr>
+                    <div class="from-group">
+                        <div class="input-group">
+                            <label for="name">Name Task</label>
+                            <input type="text" id="name" placeholder="Name Task">
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Message</label>
+                            <div class="outer-check">
+                                <div class="check">
+                                    <input type="radio" name="stats" value="progress">
+                                    <div class="radio-desp">
+                                        <h5>Active</h5>
+                                        <p><small>Task is not completed</small> </p>
+                                    </div>
+                                </div>
+
+                                <div class="check">
+                                    <input type="radio" name="stats" value="Completed">
+                                    <div class="radio-desp">
+                                        <h5>Completed</h5>
+                                        <p><small>Task already completed</small> </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="input-group">
+                        <label for="name">Date</label>
+                        <input type="date" id="date" placeholder="Enter your full name">
+                    </div>
+                    <div class=" modal-footer">
+                        <button id="saveBtn">save</button>
+                        <button id="closeBtn">cancel</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+
+    </div>
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
